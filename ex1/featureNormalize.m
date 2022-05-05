@@ -12,7 +12,7 @@ sigma = zeros(1, size(X, 2));
 for features=1:size(X,2)
     mu(1,features)=mean(X(:,features));
     X(:,features) = X(:,features) - mu(1,features);
-    
+    sigma(:,features)=std(X(:,features));
     X(:,features)=X(:,features)./std(X(:,features));
 end
 X_norm=X;
