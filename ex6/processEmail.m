@@ -1,9 +1,9 @@
 function word_indices = processEmail(email_contents)
 %PROCESSEMAIL preprocesses a the body of an email and
 %returns a list of word_indices 
-%   word_indices = PROCESSEMAIL(email_contents) preprocesses 
-%   the body of an email and returns a list of indices of the 
-%   words contained in the email. 
+% word_indices = PROCESSEMAIL(email_contents) preprocesses 
+% the body of an email and returns a list of indices of the 
+% words contained in the email. 
 %
 
 % Load Vocabulary
@@ -79,32 +79,29 @@ while ~isempty(email_contents)
     % found
     % ====================== YOUR CODE HERE ======================
     % Instructions: Fill in this function to add the index of str to
-    %               word_indices if it is in the vocabulary. At this point
-    %               of the code, you have a stemmed word from the email in
-    %               the variable str. You should look up str in the
-    %               vocabulary list (vocabList). If a match exists, you
-    %               should add the index of the word to the word_indices
-    %               vector. Concretely, if str = 'action', then you should
-    %               look up the vocabulary list to find where in vocabList
-    %               'action' appears. For example, if vocabList{18} =
-    %               'action', then, you should add 18 to the word_indices 
-    %               vector (e.g., word_indices = [word_indices ; 18]; ).
+    % word_indices if it is in the vocabulary. At this point
+    % of the code, you have a stemmed word from the email in
+    % the variable str. You should look up str in the
+    % vocabulary list (vocabList). If a match exists, you
+    % should add the index of the word to the word_indices
+    % vector. Concretely, if str = 'action', then you should
+    % look up the vocabulary list to find where in vocabList
+    % 'action' appears. For example, if vocabList{18} =
+    % 'action', then, you should add 18 to the word_indices 
+    % vector (e.g., word_indices = [word_indices ; 18]; ).
     % 
     % Note: vocabList{idx} returns a the word with index idx in the
-    %       vocabulary list.
+    % vocabulary list.
     % 
     % Note: You can use strcmp(str1, str2) to compare two strings (str1 and
-    %       str2). It will return 1 only if the two strings are equivalent.
+    % str2). It will return 1 only if the two strings are equivalent.
     %
 
-
-
-
-
-
-
-
-
+    for i=1:length(vocabList)
+        if strcmp(str, vocabList{i})==1
+            word_indices=[word_indices;i];
+        end
+    end
 
     % =============================================================
 
